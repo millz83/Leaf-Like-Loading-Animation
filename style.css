@@ -1,0 +1,45 @@
+body {
+    background: #000;
+}
+
+.loader div {
+    width:50px;
+    height:50px;
+    border-radius: 0 35px 0 35px;
+    box-sizing: border-box;
+
+}
+
+.loader > div {
+    position: absolute;
+    left: calc(50% - 30px / 2);
+    top:35%;
+
+}
+
+.loader div:not([class^="leaf"]){
+    animation:animate 1.8s ease-in-out infinite;
+    background: teal;
+}
+
+.leaf2 {
+    transform:rotate(150deg) translateY(-70px) rotate(-30deg);
+
+}
+.leaf3 {
+    transform:rotate(-150deg) translateY(-70px) rotate(30deg);
+
+
+}
+
+@keyframes animate {
+   30% {
+       transform: translate(40px,70px);
+   } 
+   60% {
+       transform: translate(40px,70px);
+   }
+   100% {
+       transform: translate(0,0);
+   }
+}
